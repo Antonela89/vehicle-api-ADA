@@ -1,0 +1,17 @@
+{
+  "name": "vehicle-api-ada",
+  "version": "1.0.0",
+  "description": "Simulacro de TP Integrador - Modulo 2 - Backend 202504\r Profesora: Sachetti Sofia",
+  "type": "module" ,
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Antonela Borgogno",
+  "license": "ISC",
+  "dependencies": {
+    "uuid": "^13.0.0"
+  }
+}
