@@ -10,7 +10,7 @@ const rl = readline.createInterface({
 // creamos al cliente
 const client = net.createConnection({ port: 8080 }, () => {
     console.log(`Conectado con el servidor`);
-    rl.question(`Escribe un comando: \nGET VEHICLES \nADD VEHICLE {}`, (comand) => {
+    rl.question(`Escribe un comando: \nGET VEHICLES \nADD VEHICLE {}\n`, (comand) => {
         client.write(comand) // enviamos el comando al servidor.
     })
 });

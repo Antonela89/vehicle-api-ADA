@@ -1,11 +1,11 @@
 import net from 'net';
-import VehicleController from './controllers/vehicleController';
+import { VehicleController }  from './controllers/vehicleController.js';
 import { v4 as uuidv4} from 'uuid';
 
 // función para validar si una cadena es un json
 
 const isJson = (string) => {
-    return string.startsWidth('{') && string.endsWidth('}')
+    return string.startsWith('{') && string.endsWith('}')
 };
 
 // creacion del servidor tcp
@@ -22,8 +22,9 @@ const server = net.createServer((socket) => {
             const response = VehicleController.getVehicles();
 
             socket.write(response);
-        } else if (comand.toUpperCase() === 'ADD VEHICLE') {
-            const vehicleDataString = comand.replace('ADD VEhICLE', '');
+
+        } else if (comand.startsWith('ADD VEHICLE')) {
+            const vehicleDataString = comand.replace('ADD VEHICLE ', '');
             //exstraemos los datos del comando
 
             // verificacion para saber si el comando el json
@@ -32,7 +33,7 @@ const server = net.createServer((socket) => {
                 const vehicleData = JSON.parse(vehicleDataString);
 
                 // verificamos que los datos sean un objeto
-                if (vehicleData && typeof(vehicleData) === 'objet') {
+                if (vehicleData && typeof vehicleData === 'object') {
                     // creamos un objeto con id único
                     const newVehicle = { id: uuidv4(), ...vehicleData};
                     const response = VehicleController.addVehicle(newVehicle);

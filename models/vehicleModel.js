@@ -9,7 +9,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // guardamos en una variable la url a la base de datos
-const pathFile = path.jpin(__dirname, '../data/vehicles.json');
+const pathFile = path.join(__dirname, '../data/vehicles.json');
 
 // Lógica 
 // creación de un objeto que tiene los metodos de la lógica

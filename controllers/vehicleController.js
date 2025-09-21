@@ -1,6 +1,6 @@
 // Importar modelo y vista
-import { VehicleModel } from '../models/vehicleModel';
-import { ResponseView, VehicleView } from '../views/vehicleViews';
+import { VehicleModel } from '../models/vehicleModel.js';
+import { ResponseView } from '../views/vehicleViews.js';
 
 const VehicleController = {
     // obtener todos los vehiculos

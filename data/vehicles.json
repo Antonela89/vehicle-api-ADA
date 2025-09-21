@@ -1,14 +1,20 @@
 [
-    {
-        "id": "1",
-        "marca": "Toyota",
-        "modelo": "Corolla",
-        "anio": 2011
-    },
-    {
-        "id": "2",
-        "marca": "Ford",
-        "modelo": "Fiesta",
-        "anio": 2010
-    }
+  {
+    "id": "1",
+    "marca": "Toyota",
+    "modelo": "Corolla",
+    "anio": 2011
+  },
+  {
+    "id": "2",
+    "marca": "Ford",
+    "modelo": "Fiesta",
+    "anio": 2010
+  },
+  {
+    "id": "75a85839-cc95-494b-aa1c-7e8cee59adfe",
+    "marca": "TOyota",
+    "modelo": "Hilux",
+    "anio": 2025
+  }
 ]
